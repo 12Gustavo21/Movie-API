@@ -20,7 +20,7 @@ export default class MoviePage extends Component {
             return {
                 movieName: item.title,
                 sinopse: item.overview,
-                imagem: `https://image.tmdb.org/t/p/w200/${item.poster_path}`,
+                poster: `https://image.tmdb.org/t/p/w200/${item.poster_path}`,
                 data: item.release_date,
                 vote: item.vote_average
             };
@@ -45,7 +45,7 @@ export default class MoviePage extends Component {
                         <S.Container>
                             <S.Box1>
                                 <h1>{item.movieName}</h1>
-                                <img src={item.imagem} alt="Image from movie" />
+                                <img src={item.poster} alt="Image from movie" />
                             </S.Box1>
                             <S.Box2>
                                 <p>{item.sinopse}</p>

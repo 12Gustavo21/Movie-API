@@ -20,7 +20,7 @@ export default class Show extends Component {
             return {
                 serieName: item.name,
                 sinopse: item.overview,
-                imagem: `https://image.tmdb.org/t/p/w200/${item.poster_path}`,
+                poster: `https://image.tmdb.org/t/p/w200/${item.poster_path}`,
                 data: item.first_air_date,
                 vote: item.vote_average
             };
@@ -45,7 +45,7 @@ export default class Show extends Component {
                         <S.Container>
                             <S.Box1>
                                 <h1>{item.serieName}</h1>
-                                <img src={item.imagem} alt="Image from movie" />
+                                <img src={item.poster} alt="Image from movie" />
                             </S.Box1>
                             <S.Box2>
                                 <p>{item.sinopse}</p>
