@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import * as S from "./styled";
 import GlobalStyle from "./components/global-styles";
-import Home from "./components/Home-page/Home";
-import MoviePage from "./components/Movie-page/Movie-Page";
-import ShowsPage from "./components/Shows-page/Show";
+import Home from "./components/pages/Home";
+import MoviePage from "./components/pages/Movie-Page";
+import ShowsPage from "./components/pages/Show";
 import SearchPage from "./components/Search-page/Search";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import logo from "./img/Logo-Principal.png";
@@ -16,7 +16,7 @@ export default class App extends Component {
         <GlobalStyle />
 
         <S.Container>
-          <Link to='/'> <S.logo src={logo} alt="EagleFlix logo" /> </Link>   
+          <Link to='/'> <img src={logo} alt="EagleFlix logo" /> </Link>   
           <Link to='/Search' > <BsSearch size='2.5vw' /> </Link>   
           <Link to='/'> <h1>Home</h1> </Link>
           <Link to='/Movies'> <h1>Movies</h1> </Link>

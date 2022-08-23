@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as S from "./Shows-styled";
+import * as S from "./Page-style";
 import axios from "axios";
 import { BsStarFill } from "react-icons/bs";
 
@@ -13,7 +13,7 @@ export default class Show extends Component {
         series: []
     };
 
-    getMovies = async () => {
+    getSeries = async () => {
         const response = await MySeries_API.get();
 
         const InfoSeries = response.data.results.map((item) => {
@@ -31,32 +31,28 @@ export default class Show extends Component {
     };
 
     componentDidMount() {
-        this.getMovies();
+        this.getSeries();
     }
 
     render() {
         return (
             <>
                 <S.BoxTitle>
-                    <h1>Movies</h1>
+                    <h1>Series</h1>
                 </S.BoxTitle>
-                <ul>
+                <S.List>
                     {this.state.series.map((item) => (
                         <S.Container>
                             <S.Box1>
                                 <h1>{item.serieName}</h1>
                                 <img src={item.poster} alt={`Serie Poster: ${item.serieName}`} />
+                                <p>Release data: {item.data}</p>
+                                <p> Assessments: <BsStarFill /> {item.vote}</p>
+                                <S.Button>Details</S.Button>
                             </S.Box1>
-                            <S.Box2>
-                                <p>{item.sinopse}</p>
-                                <S.Rate>
-                                    <p>Release data: {item.data}</p>
-                                    <p> Assessments: <BsStarFill /> {item.vote}</p>
-                                </S.Rate>
-                            </S.Box2>
                         </S.Container>
                     ))}
-                </ul>
+                </S.List>
             </>
         );
     }

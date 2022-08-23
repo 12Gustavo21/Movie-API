@@ -4,9 +4,17 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-`;
 
-export const logo = styled.img`
-    width: 100%;
-    height: 20vh;
+    h1{
+        transition: 1s all;
+    }
+
+    h1:hover{
+        text-decoration: underline;
+    }
+
+    img{
+        width: 100%;
+        height: 20vh;
+    }
 `;
