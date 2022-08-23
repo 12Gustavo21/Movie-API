@@ -45,7 +45,7 @@ export default class Show extends Component {
                         <S.Container>
                             <S.Box1>
                                 <h1>{item.serieName}</h1>
-                                <img src={item.poster} alt="Image from movie" />
+                                <img src={item.poster} alt={`Serie Poster: ${item.serieName}`} />
                             </S.Box1>
                             <S.Box2>
                                 <p>{item.sinopse}</p>

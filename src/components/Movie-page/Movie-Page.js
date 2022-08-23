@@ -45,7 +45,7 @@ export default class MoviePage extends Component {
                         <S.Container>
                             <S.Box1>
                                 <h1>{item.movieName}</h1>
-                                <img src={item.poster} alt="Image from movie" />
+                                <img src={item.poster} alt={`Movie Poster: ${item.movieName}`} />
                             </S.Box1>
                             <S.Box2>
                                 <p>{item.sinopse}</p>

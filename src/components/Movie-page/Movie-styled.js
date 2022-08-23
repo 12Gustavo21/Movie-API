@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const BoxTitle = styled.div`
+export const BoxTitle = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
 `;
 
-export const Container = styled.div`
+export const Container = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -35,7 +35,7 @@ export const Box2 = styled.section`
     width: 65%;
 `;
 
-export const Rate = styled.div`
+export const Rate = styled.section`
     height: 20vh;
     display: flex;
     align-items: flex-end;
