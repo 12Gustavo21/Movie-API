@@ -4,10 +4,8 @@ import GlobalStyle from "./components/global-styles";
 import Home from "./components/pages/Home";
 import MoviePage from "./components/pages/Movie-Page";
 import ShowsPage from "./components/pages/Show";
-import SearchPage from "./components/Search-page/Search";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import logo from "./img/Logo-Principal.png";
-import { BsSearch } from "react-icons/bs";
 
 export default class App extends Component {
   render() {
@@ -17,14 +15,12 @@ export default class App extends Component {
 
         <S.Container>
           <Link to='/'> <img src={logo} alt="EagleFlix logo" /> </Link>   
-          <Link to='/Search' > <BsSearch size='2.5vw' /> </Link>   
           <Link to='/'> <h1>Home</h1> </Link>
           <Link to='/Movies'> <h1>Movies</h1> </Link>
           <Link to='/Shows'> <h1> Series </h1> </Link>
         </S.Container>
 
         <Routes>
-          <Route path='/Search' element={<SearchPage />} />
           <Route path='/' element={<Home />} />
           <Route path='/Movies' element={<MoviePage />} />
           <Route path='/Shows' element={<ShowsPage />} />

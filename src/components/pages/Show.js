@@ -40,6 +40,9 @@ export default class Show extends Component {
                 <S.BoxTitle>
                     <h1>Series</h1>
                 </S.BoxTitle>
+                <S.Box>
+                    <S.Input placeholder="Search a serie here" />
+                </S.Box>
                 <S.List>
                     {this.state.series.map((item) => (
                         <S.Container>

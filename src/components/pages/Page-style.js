@@ -4,6 +4,10 @@ export const BoxTitle = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    h1 {
+        font-size: 2em;
+    }
 `;
 
 export const Container = styled.section`
@@ -52,4 +56,20 @@ export const Button = styled.button`
         background-color: #d8ae5e;
         color: #fff;
     }
+`;
+
+export const Input = styled.input`
+    width: 70%;
+    height: 10vh;
+    border-radius: 20px;
+    border: 1px solid #d8ae5e;
+    outline: none;
+    padding: 20px;
+`;
+
+export const Box = styled.div`
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;

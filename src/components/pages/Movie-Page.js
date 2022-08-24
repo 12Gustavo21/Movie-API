@@ -40,6 +40,9 @@ export default class MoviePage extends Component {
                 <S.BoxTitle>
                    <h1>Movies</h1> 
                 </S.BoxTitle>
+                <S.Box>
+                    <S.Input placeholder="Search a movie here" />
+                </S.Box>
                 <S.List>
                     {this.state.movies.map((item) => (
                         <S.Container>
