@@ -10,7 +10,8 @@ const MySeries_API = axios.create({
 
 export default class Show extends Component {
     state = {
-        series: []
+        series: [],
+        filteredSeries: []
     };
 
     getSeries = async () => {
@@ -18,17 +19,27 @@ export default class Show extends Component {
 
         const InfoSeries = response.data.results.map((item) => {
             return {
-                serieName: item.name,
-                sinopse: item.overview,
-                poster: `https://image.tmdb.org/t/p/w200/${item.poster_path}`,
-                data: item.first_air_date,
-                vote: item.vote_average
+                ...item
             };
         });
 
         this.setState({ series: InfoSeries });
+        this.setState({ filteredSeries: InfoSeries });
 
     };
+
+    handleChange = (e) => {
+        const FilteredList = this.state.series.filter(item => {
+            if (item.name.toLowerCase().includes(e.target.value.toLowerCase())) {
+                return true;
+            } else {
+                return ""
+            }
+        })
+        this.setState({
+            filteredSeries: FilteredList
+        })
+    }
 
     componentDidMount() {
         this.getSeries();
@@ -41,16 +52,16 @@ export default class Show extends Component {
                     <h1>Series</h1>
                 </S.BoxTitle>
                 <S.Box>
-                    <S.Input placeholder="Search a serie here" />
+                    <S.Input placeholder="Search a serie here" onChange={this.handleChange} />
                 </S.Box>
                 <S.List>
-                    {this.state.series.map((item) => (
+                    {this.state.filteredSeries.map((item) => (
                         <S.Container>
                             <S.Box1>
-                                <h1>{item.serieName}</h1>
-                                <img src={item.poster} alt={`Serie Poster: ${item.serieName}`} />
-                                <p>Release data: {item.data}</p>
-                                <p> Assessments: <BsStarFill /> {item.vote}</p>
+                                <h1>{item.name}</h1>
+                                <img src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`} alt={`Serie Poster: ${item.serieName}`} />
+                                <p>Release data: {item.first_air_date}</p>
+                                <p> Assessments: <BsStarFill /> {item.vote_average}</p>
                                 <S.Button>Details</S.Button>
                             </S.Box1>
                         </S.Container>

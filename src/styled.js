@@ -10,7 +10,7 @@ export const Container = styled.div`
     }
 
     h1:hover{
-        text-decoration: underline;
+        text-decoration: underline wavy;
     }
 
     img{

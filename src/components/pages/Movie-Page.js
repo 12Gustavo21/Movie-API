@@ -10,7 +10,8 @@ const MyMovie_API = axios.create({
 
 export default class MoviePage extends Component {
     state = {
-        movies: []
+        movies: [],
+        filteredMovies: []
     };
 
     getMovies = async () => {
@@ -18,19 +19,28 @@ export default class MoviePage extends Component {
 
         const InfosFilmes = response.data.results.map((item) => {
             return {
-                movieName: item.title,
-                sinopse: item.overview,
-                poster: `https://image.tmdb.org/t/p/w200/${item.poster_path}`,
-                data: item.release_date,
-                vote: item.vote_average
+                ...item
             };
         });
 
         this.setState({ movies: InfosFilmes });
-
+        this.setState({filteredMovies: InfosFilmes});
     };
 
-    componentDidMount() {
+    handleChange = (e) => {
+        const FilteredList = this.state.movies.filter(item => {
+            if(item.title.toLowerCase().includes(e.target.value.toLowerCase())){
+                return true;
+            } else {
+                return ""
+            }
+        })
+        this.setState({
+            filteredMovies: FilteredList
+        })
+    }
+
+    componentDidMount(){
         this.getMovies();
     }
 
@@ -41,16 +51,16 @@ export default class MoviePage extends Component {
                    <h1>Movies</h1> 
                 </S.BoxTitle>
                 <S.Box>
-                    <S.Input placeholder="Search a movie here" />
+                    <S.Input placeholder="Search a movie here" onChange={this.handleChange}/>
                 </S.Box>
                 <S.List>
-                    {this.state.movies.map((item) => (
+                    {this.state.filteredMovies.map((item) => (
                         <S.Container>
                             <S.Box1>
-                                <h1>{item.movieName}</h1>
-                                <img src={item.poster} alt={`Movie Poster: ${item.movieName}`} />
-                                <p>Release data: {item.data}</p>
-                                <p> Assessments: <BsStarFill /> {item.vote}</p>
+                                <h1>{item.title}</h1>
+                                <img src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`} alt={`Movie Poster: ${item.movieName}`} />
+                                <p>Release data: {item.release_date}</p>
+                                <p> Assessments: <BsStarFill /> {item.vote_average}</p>
                                 <S.Button>Details</S.Button> 
                             </S.Box1>
                         </S.Container>
