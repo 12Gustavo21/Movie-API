@@ -30,6 +30,11 @@ export const Box1 = styled.section`
         border-radius: 20px;
         max-width: 100%;
         max-height: 45vh;
+        transition: 1s all;
+    }
+
+    img:hover{
+        transform: scale(.9);
     }
 
     p {
@@ -45,9 +50,10 @@ export const List = styled.ul`
 `;
 
 export const Button = styled.button`
+    width: 100%;
     border-radius: 10px;
     border: 1px solid #d8ae5e;
-    padding: 5px;
+    padding: 10px;
     margin: 5px;
     font-weight: bold;
     transition: 1s all;

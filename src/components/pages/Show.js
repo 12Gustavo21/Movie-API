@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import * as S from "./Page-style";
 import axios from "axios";
 import { BsStarFill } from "react-icons/bs";
+import { Link } from 'react-router-dom';
+import Details from '../Details/Datails';
 
 const MySeries_API = axios.create({
     baseURL:
@@ -59,10 +61,10 @@ export default class Show extends Component {
                         <S.Container>
                             <S.Box1>
                                 <h1>{item.name}</h1>
-                                <img src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`} alt={`Serie Poster: ${item.serieName}`} />
+                                <Link to={`/Details/${item.id}`}> <img src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`} alt={`Serie Poster: ${item.serieName}`} /> </Link>
                                 <p>Release data: {item.first_air_date}</p>
                                 <p> Assessments: <BsStarFill /> {item.vote_average}</p>
-                                <S.Button>Details</S.Button>
+                                <Link to={`/Details/${item.id}`}> <S.Button>Details</S.Button>  </Link>
                             </S.Box1>
                         </S.Container>
                     ))}
