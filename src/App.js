@@ -27,8 +27,8 @@ export default class App extends Component {
           <Route path='/' element={<Home />} />
           <Route path='/Movies' element={<MoviePage />} />
           <Route path='/Shows' element={<ShowsPage />} />
-          <Route path='/Details/:id' element={<DetailsM />}/>
-          <Route path='/Details/:id' element={<DetailsS />}/>
+          <Route path='/Details-movie/:id' element={<DetailsM />} />
+          <Route path='/Details-serie/:id' element={<DetailsS />}/>
           <Route path='*' element={<Erro />} />
         </Routes>
 

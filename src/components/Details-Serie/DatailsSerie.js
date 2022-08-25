@@ -11,16 +11,16 @@ export default function DetailsSerie() {
     const image_path = `https://image.tmdb.org/t/p/w200`
 
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c6b4b6bad364be3d0debd4a472f74bc4`)
+        fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=c6b4b6bad364be3d0debd4a472f74bc4`)
             .then(Response => Response.json())
-            .then(data => {
+            .then(item => {
                 const serie = {
                     id,
-                    name: data.name,
-                    sinopse: data.overview,
-                    image: `${image_path}${data.poster_path}`,
-                    releaseDate: data.release_date,
-                    assessments: data.vote_average
+                    name: item.name,
+                    sinopse: item.overview,
+                    image: `${image_path}${item.poster_path}`,
+                    releaseDate: item.release_date,
+                    assessments: item.vote_average
                 }
                 setSerie(serie)
             })
@@ -30,7 +30,7 @@ export default function DetailsSerie() {
         <S.Container>
             <S.Box1>
                 <h1>{serie.name}</h1>
-                <Link to='/Shows'> <img src={serie.image} /> </Link>
+                <Link to='/Shows'> <img src={serie.image} alt="" /> </Link>
                 <p>Release data: {serie.releaseDate}</p>
                 <p>Assessments: <BsStarFill /> {serie.assessments}</p>
             </S.Box1>

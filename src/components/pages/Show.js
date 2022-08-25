@@ -60,10 +60,10 @@ export default class Show extends Component {
                         <S.Container>
                             <S.Box1>
                                 <h1>{item.name}</h1>
-                                <Link to={`/Details/${item.id}`}> <img src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`} alt={`Serie Poster: ${item.serieName}`} /> </Link>
+                                <Link to={`/Details-serie/${item.id}`}> <img src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`} alt={`Serie Poster: ${item.serieName}`} /> </Link>
                                 <p>Release data: {item.first_air_date}</p>
                                 <p> Assessments: <BsStarFill /> {item.vote_average}</p>
-                                <Link to={`/Details-Serie/${item.id}`}> <S.Button>Details</S.Button>  </Link>
+                                <Link to={`/Details-serie/${item.id}`}> <S.Button>Details</S.Button>  </Link>
                             </S.Box1>
                         </S.Container>
                     ))}
