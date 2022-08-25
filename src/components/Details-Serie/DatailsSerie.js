@@ -8,7 +8,6 @@ export default function DetailsSerie() {
     const { id } = useParams()
 
     const [serie, setSerie] = useState({})
-    const image_path = `https://image.tmdb.org/t/p/w200`
 
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=c6b4b6bad364be3d0debd4a472f74bc4`)
@@ -18,7 +17,7 @@ export default function DetailsSerie() {
                     id,
                     name: item.name,
                     sinopse: item.overview,
-                    image: `${image_path}${item.poster_path}`,
+                    image: `https://image.tmdb.org/t/p/w200${item.poster_path}`,
                     releaseDate: item.release_date,
                     assessments: item.vote_average
                 }
