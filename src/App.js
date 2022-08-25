@@ -5,7 +5,8 @@ import Home from "./components/pages/Home";
 import MoviePage from "./components/pages/Movie-Page";
 import ShowsPage from "./components/pages/Show";
 import Erro from "./components/pages/Erro-Page";
-import Details from "./components/Details/Datails";
+import DetailsM from "./components/Details-Movie/DatailsMovie";
+import DetailsS from "./components/Details-Serie/DatailsSerie";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import logo from "./img/Logo-Principal.png";
 
@@ -26,7 +27,8 @@ export default class App extends Component {
           <Route path='/' element={<Home />} />
           <Route path='/Movies' element={<MoviePage />} />
           <Route path='/Shows' element={<ShowsPage />} />
-          <Route path='/Details/:id' element={<Details />}/>
+          <Route path='/Details/:id' element={<DetailsM />}/>
+          <Route path='/Details/:id' element={<DetailsS />}/>
           <Route path='*' element={<Erro />} />
         </Routes>
 
