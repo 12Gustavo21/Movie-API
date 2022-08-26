@@ -41,4 +41,8 @@ export const Box1 = styled.div`
 export const Box2 = styled.div`
     display: flex;
     align-items: center;
+    
+    a {
+        color: #000;
+    }
 `;

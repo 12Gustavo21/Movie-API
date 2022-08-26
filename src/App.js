@@ -16,8 +16,8 @@ export default class App extends Component {
     return (
       <Router>
         <GlobalStyle />
-        
-        <S.Container>
+
+        <S.Container id="top">
           <Link to='/'> <img src={logo} alt="EagleFlix logo" /> </Link>   
           <Link to='/'> <h1>Home</h1> </Link>
           <Link to='/Movies'> <h1>Movies</h1> </Link>
@@ -40,7 +40,7 @@ export default class App extends Component {
         <BsFillEmojiLaughingFill />
         </S.Box1>
         <S.Box2>
-          <BsFillArrowUpCircleFill size="2.5vw" />
+          <a href="#top"> <BsFillArrowUpCircleFill size="2.5vw" /></a>
         </S.Box2>
       </S.Footer>
       </Router>
