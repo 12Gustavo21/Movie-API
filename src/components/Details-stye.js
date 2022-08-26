@@ -11,7 +11,7 @@ export const Container = styled.div`
     @media(max-width: 425px){
         flex-direction: column;
         width: 100%;
-        height: 150vh;
+        height: 130vh;
     }
 `;
 
@@ -38,12 +38,6 @@ export const Box1 = styled.div`
     @media(max-width: 425px){
         h1 {
             margin-top: 70px;
-        }
-    }
-
-    @media(max-width: 425px){
-        h1 {
-            margin-top: 120px;
         }
     }
 `;
