@@ -35,12 +35,12 @@ export default class App extends Component {
 
       <S.Footer>
         <S.Box1>
-          <BsFillEmojiLaughingFill />
+          <BsFillEmojiLaughingFill size="2em" />
         <h1>See you soon</h1>
-        <BsFillEmojiLaughingFill />
+        <BsFillEmojiLaughingFill size="2em" />
         </S.Box1>
         <S.Box2>
-          <a href="#top"> <BsFillArrowUpCircleFill size="2.5vw" /></a>
+          <a href="#top"> <BsFillArrowUpCircleFill size="2.5em" /></a>
         </S.Box2>
       </S.Footer>
       </Router>

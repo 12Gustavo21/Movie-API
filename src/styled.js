@@ -29,13 +29,19 @@ export const Footer = styled.footer`
     height: 20vh;
     background-color: #d8ae5e;
     color: #000;
+    text-align: center;
 `;
 
 export const Box1 = styled.div`
-    width: 20%;
+    width: 40%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-size: 1em;
+
+    @media(max-width: 750px){
+        font-size: .8em;
+    }
 `;
 
 export const Box2 = styled.div`
