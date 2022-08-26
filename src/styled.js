@@ -5,10 +5,12 @@ export const Container = styled.header`
     align-items: center;
     justify-content: space-around;
     background: #000;
+    color: #d8ae5e;
 
     h1{
         transition: 1s all;
         color: #d8ae5e;
+        padding: 20px;
     }
 
     h1:hover{
@@ -18,6 +20,22 @@ export const Container = styled.header`
     img{
         width: 100%;
         height: 20vh;
+    }
+
+    div {
+        display: flex;
+    }
+
+    @media(max-width: 425px){
+        flex-direction: column;
+        div {
+            display: flex;
+            padding-bottom: 10px;
+        }
+
+        h1 {
+            padding: 7px;
+        }
     }
 `;
 

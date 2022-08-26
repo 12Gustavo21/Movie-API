@@ -7,6 +7,12 @@ export const Container = styled.div`
     text-align: center;
     background: #000;
     color: #d8ae5e;
+
+    @media(max-width: 425px){
+        flex-direction: column;
+        width: 100%;
+        height: 150vh;
+    }
 `;
 
 export const Box1 = styled.div`
@@ -27,6 +33,18 @@ export const Box1 = styled.div`
 
     p {
         padding: 3px;
+    }
+
+    @media(max-width: 425px){
+        h1 {
+            margin-top: 70px;
+        }
+    }
+
+    @media(max-width: 425px){
+        h1 {
+            margin-top: 120px;
+        }
     }
 `;
 
@@ -53,5 +71,13 @@ export const Box2 = styled.div`
         cursor: pointer;
         background-color: #d8ae5e;
         color: #fff;
+    }
+
+    @media(max-width: 425px){
+        margin: 50px 10px 150px 10px;
+
+        button {
+            margin: 10px 0;
+        }
     }
 `;

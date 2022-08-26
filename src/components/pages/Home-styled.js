@@ -13,6 +13,13 @@ export const Container = styled.main`
     @media(max-width: 950px){
         flex-direction: column;
     }
+
+    @media(max-width: 425px){
+        img {
+            width: 100%;
+            height: 60vh;
+        }
+    }
 `;
 
 export const Title = styled.h1`
