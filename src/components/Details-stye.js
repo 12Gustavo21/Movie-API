@@ -5,6 +5,8 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
+    background: #000;
+    color: #d8ae5e;
 `;
 
 export const Box1 = styled.div`
@@ -43,6 +45,8 @@ export const Box2 = styled.div`
         margin: 5px;
         font-weight: bold;
         transition: 1s all;
+        background: none;
+        color: #d8ae5e;
     }
 
     button:hover{

@@ -47,7 +47,7 @@ export default class MoviePage extends Component {
 
     render() {
         return (
-            <>
+            <S.Main>
                 <S.BoxTitle>
                    <h1>Movies</h1> 
                 </S.BoxTitle>
@@ -67,7 +67,7 @@ export default class MoviePage extends Component {
                         </S.Container>
                     ))}
                 </S.List>
-            </>
+            </S.Main>
         );
     }
 }

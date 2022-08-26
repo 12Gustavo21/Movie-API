@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Main = styled.main`
+    background: #000;
+    color: #d8ae5e;
+`;
+
 export const BoxTitle = styled.section`
     display: flex;
     align-items: center;
@@ -55,8 +60,10 @@ export const Button = styled.button`
     border: 1px solid #d8ae5e;
     padding: 10px;
     margin: 5px;
+    background: none;
     font-weight: bold;
     transition: 1s all;
+    color: #d8ae5e;
     &:hover{
         cursor: pointer;
         background-color: #d8ae5e;
@@ -71,6 +78,7 @@ export const Input = styled.input`
     border: 1px solid #d8ae5e;
     outline: none;
     padding: 20px;
+    background: none;
 `;
 
 export const Box = styled.div`

@@ -7,8 +7,17 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         list-style: none;
         text-decoration: none;
-        background: #000;
-        color: #d8ae5e;
+        cursor: url("https://media.discordapp.net/attachments/1000858323026989078/1012548236197777488/Eagleflix.png?width=416&height=416");
+    }
+
+    ::-webkit-scrollbar {
+        background: #131313;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: none;
+        border: 1px solid #d8ae5e;
+        border-radius: 20px;
     }
 `;
 

@@ -9,13 +9,14 @@ import DetailsM from "./components/Details-Movie/DatailsMovie";
 import DetailsS from "./components/Details-Serie/DatailsSerie";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import logo from "./img/Logo-Principal.png";
-
+import { BsFillArrowUpCircleFill,
+  BsFillEmojiLaughingFill } from "react-icons/bs";
 export default class App extends Component {
   render() {
     return (
       <Router>
         <GlobalStyle />
-
+        
         <S.Container>
           <Link to='/'> <img src={logo} alt="EagleFlix logo" /> </Link>   
           <Link to='/'> <h1>Home</h1> </Link>
@@ -32,6 +33,16 @@ export default class App extends Component {
           <Route path='*' element={<Erro />} />
         </Routes>
 
+      <S.Footer>
+        <S.Box1>
+          <BsFillEmojiLaughingFill />
+        <h1>See you soon</h1>
+        <BsFillEmojiLaughingFill />
+        </S.Box1>
+        <S.Box2>
+          <BsFillArrowUpCircleFill size="2.5vw" />
+        </S.Box2>
+      </S.Footer>
       </Router>
     )
   }

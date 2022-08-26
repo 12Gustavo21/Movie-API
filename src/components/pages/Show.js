@@ -48,7 +48,7 @@ export default class Show extends Component {
 
     render() {
         return (
-            <>
+            <S.Main>
                 <S.BoxTitle>
                     <h1>Series</h1>
                 </S.BoxTitle>
@@ -68,7 +68,7 @@ export default class Show extends Component {
                         </S.Container>
                     ))}
                 </S.List>
-            </>
+            </S.Main>
         );
     }
 }
