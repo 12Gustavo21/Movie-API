@@ -18,15 +18,14 @@ export const Container = styled.header`
     }
 
     img{
-        width: 100%;
-        height: 20vh;
+        width: 30%;
     }
 
     div {
         display: flex;
     }
 
-    @media(max-width: 425px){
+    @media(max-width: 650px){
         flex-direction: column;
         div {
             display: flex;
@@ -35,6 +34,10 @@ export const Container = styled.header`
 
         h1 {
             padding: 7px;
+        }
+
+        img {
+            margin-left: 35%;
         }
     }
 `;

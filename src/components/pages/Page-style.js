@@ -79,6 +79,7 @@ export const Input = styled.input`
     outline: none;
     padding: 20px;
     background: none;
+    color: #d8ae5e;
 `;
 
 export const Box = styled.div`
