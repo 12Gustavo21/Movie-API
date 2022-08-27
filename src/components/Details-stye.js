@@ -29,6 +29,7 @@ export const Box1 = styled.div`
 
     img:hover{
         transform: scale(.9);
+        cursor: url(https://www.cursor.cc/cursor/102/176/cursor.png), auto!important;
     }
 
     p {
@@ -65,6 +66,7 @@ export const Box2 = styled.div`
         cursor: pointer;
         background-color: #d8ae5e;
         color: #fff;
+        cursor: url(https://www.cursor.cc/cursor/102/176/cursor.png), auto!important;
     }
 
     @media(max-width: 425px){

@@ -40,6 +40,7 @@ export const Box1 = styled.section`
 
     img:hover{
         transform: scale(.9);
+        cursor: url(https://www.cursor.cc/cursor/107/176/cursor.png), auto!important;
     }
 
     p {
@@ -68,6 +69,7 @@ export const Button = styled.button`
         cursor: pointer;
         background-color: #d8ae5e;
         color: #fff;
+        cursor: url(https://www.cursor.cc/cursor/107/176/cursor.png), auto!important;
     }
 `;
 

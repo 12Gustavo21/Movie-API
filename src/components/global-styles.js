@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
         list-style: none;
         text-decoration: none;
         scroll-behavior: smooth;
+        cursor: url(https://www.cursor.cc/cursor/106/176/cursor.png), auto !important;
     }
 
     ::-webkit-scrollbar {

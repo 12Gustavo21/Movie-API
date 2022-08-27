@@ -15,10 +15,15 @@ export const Container = styled.header`
 
     h1:hover{
         text-decoration: underline wavy;
+        cursor: url(https://www.cursor.cc/cursor/107/176/cursor.png), auto!important;
     }
 
-    img{
+    img {
         width: 30%;
+    }
+
+    img:hover {
+        cursor: url(https://www.cursor.cc/cursor/107/176/cursor.png), auto!important;
     }
 
     div {
@@ -71,5 +76,10 @@ export const Box2 = styled.div`
     
     a {
         color: #000;
+    }
+
+    a:hover {
+        transform: scale(1.1);
+        cursor: url(https://www.cursor.cc/cursor/107/176/cursor.png), auto!important;
     }
 `;
