@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Main = styled.main`
     background: #000;
     color: #d8ae5e;
+    min-height: 100vh;
 `;
 
 export const BoxTitle = styled.section`
