@@ -8,7 +8,7 @@ import Erro from "./components/pages/Erro-Page";
 import DetailsM from "./components/Details-Movie/DatailsMovie";
 import DetailsS from "./components/Details-Serie/DatailsSerie";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import logo from "./img/Logo-Principal.png";
+import logo from "./img/Main-logo.png";
 import {
   BsFillArrowUpCircleFill,
   BsFillEmojiLaughingFill
@@ -20,12 +20,12 @@ export default class App extends Component {
         <GlobalStyle />
 
         <S.Container id="top">
-            <Link to='/'> <img src={logo} alt="EagleFlix logo" /> </Link>
-            <div>
-              <Link to='/'> <h1>Home</h1> </Link>
-              <Link to='/Movies'> <h1>Movies</h1> </Link>
-              <Link to='/Shows'> <h1> Series </h1> </Link>
-            </div>
+          <Link to='/'> <img src={logo} alt="EagleFlix logo" /> </Link>
+          <div>
+            <Link to='/'> <h1>Home</h1> </Link>
+            <Link to='/Movies'> <h1>Movies</h1> </Link>
+            <Link to='/Shows'> <h1> Series </h1> </Link>
+          </div>
         </S.Container>
 
         <Routes>
