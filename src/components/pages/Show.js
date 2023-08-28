@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const MySeries_API = axios.create({
     baseURL:
-        "https://api.themoviedb.org/3/tv/popular?api_key=c6b4b6bad364be3d0debd4a472f74bc4"
+        "https://api.themoviedb.org/3/tv/top_rated/?api_key=c6b4b6bad364be3d0debd4a472f74bc4"
 });
 
 export default class Show extends Component {
