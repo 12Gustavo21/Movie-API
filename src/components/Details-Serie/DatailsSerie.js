@@ -10,7 +10,7 @@ export default function DetailsSerie() {
     const [serie, setSerie] = useState({})
 
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/tv/top_rated/${id}?api_key=c6b4b6bad364be3d0debd4a472f74bc4`)
+        fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=c6b4b6bad364be3d0debd4a472f74bc4`)
             .then(Response => Response.json())
             .then(item => {
                 const serie = {
